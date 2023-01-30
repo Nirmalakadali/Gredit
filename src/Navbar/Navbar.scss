@@ -1,0 +1,91 @@
+.navbar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    background-color: rgb(247, 243, 243);
+    backdrop-filter: blur(4px);
+    --webkit-backdrop-filter: blur(4px);
+    border-radius: 40px;
+    .Greddit_logo {
+      float: left;
+      padding-left: 100px;
+    }
+  
+    .Nav_bar_list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      font-size: larger;
+  
+      li {
+        margin: 0rem 2.5rem;
+        cursor: pointer;
+        padding: 0 5px;
+        padding: 8px;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        background: repeating-linear-gradient(
+              180deg,
+              #0000 0 2.5%,
+              currentColor 0 5%,
+              #0000 0 10%
+            )
+            top left,
+          repeating-linear-gradient(
+              -90deg,
+              #0000 0 5%,
+              currentColor 0 7.5%,
+              #0000 0 10%
+            )
+            top right,
+          repeating-linear-gradient(0deg, #0000 0 7.5%, currentColor 0 10%) bottom
+            right,
+          repeating-linear-gradient(90deg, currentColor 0 2.5%, #0000 0 10%)
+            bottom left;
+        background-size: 3px 4000%, 4000% 3px;
+        background-repeat: no-repeat;
+  
+        &:hover {
+          background-position: bottom left, top left, top right, bottom right;
+          transition: 15s linear;
+        }
+      }
+    }
+  }
+  .guideline {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    padding:10px 30px;
+    text-transform: uppercase;
+    color: rgb(15, 15, 15);
+    width: 50%;
+    overflow: hidden;
+    transition: color 1s;
+    border-radius: 20px;
+  }
+  .guideline:hover {
+    color: #f3f0f0;
+    background-color: rgb(3, 5, 5);
+    transition:  ease-in-out 1s;
+  
+  }
+  
+  .guideline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    z-index: -1;
+    width: 150%;
+    height: 100%;
+    background-color: #0d7436;
+    transform: scaleX(0) skewX(35deg);
+    transform-origin: left;
+  }
+  .guideline:hover::before {
+    transform: scaleX(1) skewX(35deg);
+  }
+  
